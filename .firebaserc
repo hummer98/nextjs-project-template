@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "nextjs-project-template-dev",
+    "dev": "nextjs-project-template-dev"
+  },
+  "targets": {},
+  "etags": {}
+}
