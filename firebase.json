@@ -20,11 +20,20 @@
         ".git",
         "firebase-debug.log",
         "firebase-debug.*.log",
-        "*.local"
+        "*.local",
+        ".eslintrc.js",
+        "src",
+        "tsconfig.json",
+        "tsconfig.*.json"
       ],
       "predeploy": [
-        "npm --prefix \"$RESOURCE_DIR\" run lint",
+        "cd \"$RESOURCE_DIR\" && npm pack ../packages/common",
+        "cd \"$RESOURCE_DIR\" && npm install \"file:packages-common-1.0.0.tgz\"",
         "npm --prefix \"$RESOURCE_DIR\" run build"
+      ],
+      "postdeploy": [
+        "rm \"$RESOURCE_DIR/packages-common-1.0.0.tgz\"",
+        "npm uninstall @packages/common"
       ]
     }
   ]

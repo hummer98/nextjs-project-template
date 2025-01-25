@@ -4,14 +4,12 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "outDir": "lib",
-    "sourceMap": true,
+    "sourceMap": false,
     "strict": true,
-    "target": "es2017",
-    // "rootDir": "./src",
-    "paths": {
-      "@common": ["../common/*"]
-    }
+    "target": "ES2022",
+    "types": ["node","@types/node"],
   },
   "compileOnSave": true,
-  "include": ["src/**/*"]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }

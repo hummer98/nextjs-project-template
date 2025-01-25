@@ -1,9 +1,12 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import { append } from '@packages/common/utils/append'
 
 export default function Home() {
+  const c = append(1, 2);
   return (
     <main className={styles.main}>
+      <p>{c}</p>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
